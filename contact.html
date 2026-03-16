@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Global Creative Group</title>
+    <meta name="description" content="Contact GLOBAL CREATIVE GROUP for enterprise IT hardware inquiries. Get quotes for memory, storage, and GPU solutions.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5c 100%);
+            color: white;
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .contact-hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 24px;
+        }
+        
+        .contact-info > p {
+            color: var(--text-medium);
+            margin-bottom: 40px;
+        }
+        
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 28px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .info-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #00B894 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .info-icon i {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .info-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .info-content p {
+            color: var(--text-medium);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .info-content a {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .info-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-form-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-form-wrapper h2 {
+            margin-bottom: 8px;
+        }
+        
+        .contact-form-wrapper > p {
+            color: var(--text-medium);
+            margin-bottom: 32px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .form-group label .required {
+            color: #EF4444;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+        }
+        
+        .map-section {
+            padding: 80px 0;
+        }
+        
+        .map-section .section-header {
+            margin-bottom: 40px;
+        }
+        
+        .map-container {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .map-placeholder {
+            text-align: center;
+            color: var(--text-medium);
+        }
+        
+        .map-placeholder i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: var(--secondary-color);
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 24px 24px;
+            max-height: 200px;
+        }
+        
+        .faq-answer p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">GCG SUPPLY</span>
+                    <span class="logo-sub">環球創想集團</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="products/index.html">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products/memory.html">Memory</a></li>
+                            <li><a href="products/storage.html">Storage</a></li>
+                            <li><a href="products/gpu.html">GPU</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for product inquiries, quotes, or partnership opportunities. We're here to help with your IT hardware needs.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Reach out to us through any of the following channels. Our team typically responds within 24 hours.</p>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p>For general inquiries and quotes:<br>
+                                <a href="mailto:GLAL-CREATIVE@outlook.com">GLAL-CREATIVE@outlook.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Office Address</h3>
+                                <p>UNIT 1406A 14/F THE BELGIAN<br>
+                                BANK BUILDING NOS 721-725<br>
+                                NATHAN ROAD, KOWLOON, HONG KONG</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Company Information</h3>
+                                <p>GLOBAL CREATIVE GROUP CO., LIMITED<br>
+                                環球創想集團有限公司<br>
+                                Hong Kong Based | Serving Global Markets</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM (HKT)<br>
+                                Saturday - Sunday: Closed<br>
+                                We respond to emails 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name <span class="required">*</span></label>
+                                <input type="text" id="company" name="company" required placeholder="ABC Technology">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Product Interest <span class="required">*</span></label>
+                            <select id="product" name="product" required>
+                                <option value="">Select a product category</option>
+                                <option value="memory">Server Memory (DDR4/DDR5)</option>
+                                <option value="storage-ssd">Enterprise SSD</option>
+                                <option value="storage-hdd">Enterprise HDD</option>
+                                <option value="gpu-h100">NVIDIA H100/H200</option>
+                                <option value="gpu-a100">NVIDIA A100</option>
+                                <option value="gpu-l40s">NVIDIA L40S/RTX</option>
+                                <option value="multiple">Multiple Products</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quantity">Estimated Quantity</label>
+                            <input type="text" id="quantity" name="quantity" placeholder="e.g., 100 units, 50TB, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Please describe your requirements, timeline, and any specific questions..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-subtitle">Strategically located in Hong Kong for global logistics</p>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Hong Kong Office</h3>
+                    <p>UNIT 1406A 14/F THE BELGIAN, BANK BLDG<br>NATHAN ROAD, KOWLOON</p>
+                    <p style="margin-top: 16px; font-size: 14px;">
+                        <a href="https://maps.google.com/?q=22.3193,114.1694" target="_blank" style="color: var(--secondary-color);">
+                            <i class="fas fa-external-link-alt"></i> View on Google Maps
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your minimum order quantity (MOQ)?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our standard MOQ varies by product. For memory modules, typically 10-50 units; for SSDs/HDDs, 5-20 units; for GPUs, 1-5 units. However, we offer flexible terms for long-term partnerships and can discuss specific requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long is the warranty period?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All products come with full manufacturer warranty: Samsung/SK Hynix memory (3-5 years), Seagate/WD HDDs (3-5 years), Samsung SSDs (3-5 years), NVIDIA GPUs (3 years). We also provide technical support throughout the warranty period.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are your payment terms?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For new customers: 30% deposit, 70% before shipment. For established partners: Net 30 terms available. We accept wire transfer (T/T), and can discuss other payment methods for large orders.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does shipping take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Shipping time depends on destination and method: Express (DHL/FedEx) 3-7 days worldwide; Air freight 7-14 days; Sea freight 20-40 days. We maintain ready inventory for many products, reducing lead times.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your products genuine?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We only source products through authorized distributor channels. All items come with original manufacturer warranty and authenticity guarantees. We can provide certificates of authenticity upon request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">GLOBAL CREATIVE GROUP</h3>
+                    <p class="footer-desc">Your trusted partner for enterprise IT hardware solutions. Based in Hong Kong, serving global markets.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> GLAL-CREATIVE@outlook.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> UNIT 1406A 14/F THE BELGIAN, BANK BLDG, 721-725 NATHAN RD, KL</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products/index.html">Products</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products/memory.html">Server Memory</a></li>
+                        <li><a href="products/storage.html">Enterprise Storage</a></li>
+                        <li><a href="products/gpu.html">Data Center GPU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Get Quote</a></li>
+                        <li><a href="contact.html">Technical Support</a></li>
+                        <li><a href="contact.html">Partnership Inquiry</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GCG SUPPLY (環球創想集團有限公司). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

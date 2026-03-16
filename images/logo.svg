@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2540"/>
+      <stop offset="100%" style="stop-color:#1a3a5c"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4AA"/>
+      <stop offset="100%" style="stop-color:#00B894"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)"/>
+  
+  <!-- Globe/Network icon -->
+  <g transform="translate(100, 100)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="url(#accentGradient)" stroke-width="3"/>
+    
+    <!-- Horizontal lines representing network -->
+    <ellipse cx="0" cy="0" rx="50" ry="20" fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <ellipse cx="0" cy="0" rx="50" ry="35" fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Vertical arc -->
+    <ellipse cx="0" cy="0" rx="20" ry="50" fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <ellipse cx="0" cy="0" rx="35" ry="50" fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="8" fill="url(#accentGradient)"/>
+    
+    <!-- Connection nodes -->
+    <circle cx="0" cy="-50" r="4" fill="url(#accentGradient)"/>
+    <circle cx="43" cy="-25" r="4" fill="url(#accentGradient)"/>
+    <circle cx="43" cy="25" r="4" fill="url(#accentGradient)"/>
+    <circle cx="0" cy="50" r="4" fill="url(#accentGradient)"/>
+    <circle cx="-43" cy="25" r="4" fill="url(#accentGradient)"/>
+    <circle cx="-43" cy="-25" r="4" fill="url(#accentGradient)"/>
+  </g>
+  
+  <!-- Company initials -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00D4AA">GCG</text>
+</svg>

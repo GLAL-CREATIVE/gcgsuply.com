@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Global Creative Group - Memory, Storage, GPU</title>
+    <meta name="description" content="Explore our comprehensive range of enterprise IT hardware: Samsung/SK Hynix memory, Seagate/WD storage, and NVIDIA GPUs.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .products-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5c 100%);
+            color: white;
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+        
+        .products-hero h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .products-hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .category-section {
+            padding: 80px 0;
+        }
+        
+        .category-section:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+        
+        .category-section:nth-child(odd) {
+            background-color: white;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #00B894 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .category-icon i {
+            font-size: 36px;
+            color: white;
+        }
+        
+        .category-title h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        
+        .category-title p {
+            color: var(--text-medium);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .product-item {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .product-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .product-image {
+            height: 180px;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image i {
+            font-size: 64px;
+            color: var(--secondary-color);
+            opacity: 0.6;
+        }
+        
+        .product-info {
+            padding: 24px;
+        }
+        
+        .product-brand {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+        
+        .product-specs {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .product-specs li {
+            font-size: 14px;
+            color: var(--text-medium);
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .product-specs li span:first-child {
+            color: var(--text-light);
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .product-actions .btn {
+            flex: 1;
+            padding: 10px 16px;
+            font-size: 14px;
+        }
+        
+        .view-all-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .feature-box {
+            background: white;
+            padding: 28px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .feature-box i {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 16px;
+        }
+        
+        .feature-box h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .feature-box p {
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+        
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5c 100%);
+            color: white;
+            padding: 60px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .cta-banner h3 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 24px;
+        }
+        
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .features-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .products-hero h1 {
+                font-size: 36px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-banner {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">GCG SUPPLY</span>
+                    <span class="logo-sub">環球創想集團</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="active">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="memory.html">Memory</a></li>
+                            <li><a href="storage.html">Storage</a></li>
+                            <li><a href="gpu.html">GPU</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../applications.html">Applications</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="../contact.html" class="btn btn-primary">Get Quote</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Comprehensive enterprise IT hardware solutions from world-leading brands. All products sourced through authorized channels with full manufacturer warranty.</p>
+        </div>
+    </section>
+
+    <!-- Memory Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-memory"></i>
+                </div>
+                <div class="category-title">
+                    <h2>Server Memory</h2>
+                    <p>DDR4/DDR5 ECC RDIMM and LRDIMM for enterprise servers and data centers</p>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Samsung</div>
+                        <h3 class="product-name">DDR5 ECC RDIMM</h3>
+                        <ul class="product-specs">
+                            <li><span>Capacity</span> <span>16GB - 128GB</span></li>
+                            <li><span>Speed</span> <span>4800MHz</span></li>
+                            <li><span>Type</span> <span>ECC RDIMM</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="memory.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Samsung</div>
+                        <h3 class="product-name">DDR5 LRDIMM</h3>
+                        <ul class="product-specs">
+                            <li><span>Capacity</span> <span>64GB - 256GB</span></li>
+                            <li><span>Speed</span> <span>4800MHz</span></li>
+                            <li><span>Type</span> <span>Load-Reduced</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="memory.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">SK Hynix</div>
+                        <h3 class="product-name">DDR5 ECC RDIMM</h3>
+                        <ul class="product-specs">
+                            <li><span>Capacity</span> <span>16GB - 128GB</span></li>
+                            <li><span>Speed</span> <span>4800MHz</span></li>
+                            <li><span>Type</span> <span>ECC RDIMM</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="memory.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-section">
+                <a href="memory.html" class="btn btn-outline btn-lg">View All Memory Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storage Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-hdd"></i>
+                </div>
+                <div class="category-title">
+                    <h2>Enterprise Storage</h2>
+                    <p>SATA/NVMe SSDs and enterprise HDDs for data centers and cloud infrastructure</p>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Samsung</div>
+                        <h3 class="product-name">PM893 SATA SSD</h3>
+                        <ul class="product-specs">
+                            <li><span>Capacity</span> <span>960GB - 30.72TB</span></li>
+                            <li><span>Interface</span> <span>SATA 6Gb/s</span></li>
+                            <li><span>DWPD</span> <span>1.3</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="storage.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Samsung</div>
+                        <h3 class="product-name">PM9A3 NVMe SSD</h3>
+                        <ul class="product-specs">
+                            <li><span>Capacity</span> <span>960GB - 15.36TB</span></li>
+                            <li><span>Interface</span> <span>PCIe 4.0 x4</span></li>
+                            <li><span>Form Factor</span> <span>U.2</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="storage.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-compact-disc"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Seagate</div>
+                        <h3 class="product-name">Exos X Enterprise</h3>
+                        <ul class="product-specs">
+                            <li><span>Capacity</span> <span>16TB - 20TB</span></li>
+                            <li><span>Interface</span> <span>SATA 6Gb/s</span></li>
+                            <li><span>RPM</span> <span>7200</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="storage.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-section">
+                <a href="storage.html" class="btn btn-outline btn-lg">View All Storage Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GPU Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="category-title">
+                    <h2>Data Center GPU</h2>
+                    <p>NVIDIA GPUs for AI training, inference, and high-performance computing</p>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">NVIDIA</div>
+                        <h3 class="product-name">H100 Tensor Core</h3>
+                        <ul class="product-specs">
+                            <li><span>Memory</span> <span>80GB HBM3</span></li>
+                            <li><span>Form Factor</span> <span>SXM5 / PCIe</span></li>
+                            <li><span>TDP</span> <span>700W / 350W</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="gpu.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">NVIDIA</div>
+                        <h3 class="product-name">H200 Tensor Core</h3>
+                        <ul class="product-specs">
+                            <li><span>Memory</span> <span>141GB HBM3e</span></li>
+                            <li><span>Form Factor</span> <span>SXM5</span></li>
+                            <li><span>TDP</span> <span>700W</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="gpu.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">NVIDIA</div>
+                        <h3 class="product-name">A100 Tensor Core</h3>
+                        <ul class="product-specs">
+                            <li><span>Memory</span> <span>80GB HBM2e</span></li>
+                            <li><span>Form Factor</span> <span>SXM4 / PCIe</span></li>
+                            <li><span>TDP</span> <span>400W / 300W</span></li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="gpu.html" class="btn btn-outline">Details</a>
+                            <a href="../contact.html" class="btn btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-section">
+                <a href="gpu.html" class="btn btn-outline btn-lg">View All GPU Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Products -->
+    <section class="category-section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Our Products</h2>
+                <p class="section-subtitle">Quality and reliability you can count on</p>
+            </div>
+            
+            <div class="features-list">
+                <div class="feature-box">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>100% Genuine</h4>
+                    <p>All products sourced through authorized distributor channels</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Full Warranty</h4>
+                    <p>Complete manufacturer warranty on every product</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-tags"></i>
+                    <h4>Competitive Pricing</h4>
+                    <p>Bulk pricing advantages for volume orders</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-truck"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Ready inventory for mainstream products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="category-section">
+        <div class="container">
+            <div class="cta-banner">
+                <h3>Need a Custom Quote?</h3>
+                <p>Contact us for volume pricing, product availability, and technical consultation.</p>
+                <a href="../contact.html" class="btn btn-primary btn-lg">Request Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">GLOBAL CREATIVE GROUP</h3>
+                    <p class="footer-desc">Your trusted partner for enterprise IT hardware solutions. Based in Hong Kong, serving global markets.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> GLAL-CREATIVE@outlook.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> UNIT 1406A 14/F THE BELGIAN, BANK BLDG, 721-725 NATHAN RD, KL</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="index.html">Products</a></li>
+                        <li><a href="../applications.html">Applications</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="memory.html">Server Memory</a></li>
+                        <li><a href="storage.html">Enterprise Storage</a></li>
+                        <li><a href="gpu.html">Data Center GPU</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="../contact.html">Get Quote</a></li>
+                        <li><a href="../contact.html">Technical Support</a></li>
+                        <li><a href="../contact.html">Partnership Inquiry</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GCG SUPPLY (環球創想集團有限公司). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
