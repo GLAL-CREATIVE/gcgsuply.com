@@ -191,6 +191,45 @@
             color: white;
         }
         
+        .product-images-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            padding: 24px 32px;
+        }
+        
+        .product-image-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .product-image-item:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+        }
+        
+        .product-image-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        
+        .product-image-item .product-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+        
+        .product-image-item .product-spec {
+            font-size: 11px;
+            color: #64748b;
+        }
+        
         .brand-info h3 {
             font-size: 24px;
             font-weight: 700;
@@ -473,21 +512,22 @@
                             <span>World's Largest Memory Manufacturer</span>
                         </div>
                     </div>
-                    <div class="brand-products">
-                        <ul class="product-mini-list">
-                            <li>
-                                <span class="product-name">DDR5 ECC RDIMM</span>
-                                <span class="product-spec">16GB - 128GB / 4800MHz</span>
-                            </li>
-                            <li>
-                                <span class="product-name">DDR5 LRDIMM</span>
-                                <span class="product-spec">64GB - 256GB / 4800MHz</span>
-                            </li>
-                            <li>
-                                <span class="product-name">DDR4 ECC RDIMM</span>
-                                <span class="product-spec">16GB - 64GB / 3200MHz</span>
-                            </li>
-                        </ul>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="../images/products/memory/samsung/ddr5-rdimm.svg" alt="Samsung DDR5 ECC RDIMM">
+                            <div class="product-name">DDR5 ECC RDIMM</div>
+                            <div class="product-spec">16GB - 128GB</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/memory/samsung/ddr5-lrdimm.svg" alt="Samsung DDR5 LRDIMM">
+                            <div class="product-name">DDR5 LRDIMM</div>
+                            <div class="product-spec">64GB - 256GB</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/memory/samsung/ddr4-rdimm.svg" alt="Samsung DDR4 ECC RDIMM">
+                            <div class="product-name">DDR4 ECC RDIMM</div>
+                            <div class="product-spec">16GB - 64GB</div>
+                        </div>
                     </div>
                     <a href="samsung-memory.html" class="view-brand-btn">View Samsung Memory →</a>
                 </div>
@@ -503,21 +543,22 @@
                             <span>Leading Memory & Semiconductor Solutions</span>
                         </div>
                     </div>
-                    <div class="brand-products">
-                        <ul class="product-mini-list">
-                            <li>
-                                <span class="product-name">DDR5 ECC RDIMM</span>
-                                <span class="product-spec">16GB - 128GB / 4800MHz</span>
-                            </li>
-                            <li>
-                                <span class="product-name">DDR5 LRDIMM</span>
-                                <span class="product-spec">64GB - 256GB / 4800MHz</span>
-                            </li>
-                            <li>
-                                <span class="product-name">DDR4 ECC RDIMM</span>
-                                <span class="product-spec">16GB - 64GB / 3200MHz</span>
-                            </li>
-                        </ul>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="../images/products/memory/skhynix/ddr5-rdimm.svg" alt="SK Hynix DDR5 ECC RDIMM">
+                            <div class="product-name">DDR5 ECC RDIMM</div>
+                            <div class="product-spec">16GB - 128GB</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/memory/skhynix/ddr5-lrdimm.svg" alt="SK Hynix DDR5 LRDIMM">
+                            <div class="product-name">DDR5 LRDIMM</div>
+                            <div class="product-spec">64GB - 256GB</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/memory/skhynix/ddr4-rdimm.svg" alt="SK Hynix DDR4 ECC RDIMM">
+                            <div class="product-name">DDR4 ECC RDIMM</div>
+                            <div class="product-spec">16GB - 64GB</div>
+                        </div>
                     </div>
                     <a href="skhynix-memory.html" class="view-brand-btn">View SK Hynix Memory →</a>
                 </div>
@@ -550,21 +591,22 @@
                             <span>Enterprise SSD Solutions</span>
                         </div>
                     </div>
-                    <div class="brand-products">
-                        <ul class="product-mini-list">
-                            <li>
-                                <span class="product-name">PM893 SATA SSD</span>
-                                <span class="product-spec">960GB - 30.72TB / SATA 6Gb/s</span>
-                            </li>
-                            <li>
-                                <span class="product-name">PM9A3 NVMe SSD</span>
-                                <span class="product-spec">960GB - 15.36TB / PCIe 4.0</span>
-                            </li>
-                            <li>
-                                <span class="product-name">PM1733 NVMe SSD</span>
-                                <span class="product-spec">1.92TB - 15.36TB / PCIe 4.0</span>
-                            </li>
-                        </ul>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/samsung/pm893-sata.svg" alt="Samsung PM893 SATA SSD">
+                            <div class="product-name">PM893 SATA SSD</div>
+                            <div class="product-spec">960GB - 30.72TB</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/samsung/pm9a3-nvme.svg" alt="Samsung PM9A3 NVMe SSD">
+                            <div class="product-name">PM9A3 NVMe SSD</div>
+                            <div class="product-spec">960GB - 15.36TB</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/samsung/pm1733-nvme.svg" alt="Samsung PM1733 NVMe SSD">
+                            <div class="product-name">PM1733 NVMe SSD</div>
+                            <div class="product-spec">1.92TB - 15.36TB</div>
+                        </div>
                     </div>
                     <a href="samsung-storage.html" class="view-brand-btn">View Samsung Storage →</a>
                 </div>
@@ -580,21 +622,22 @@
                             <span>Enterprise HDD Solutions</span>
                         </div>
                     </div>
-                    <div class="brand-products">
-                        <ul class="product-mini-list">
-                            <li>
-                                <span class="product-name">Exos X20</span>
-                                <span class="product-spec">20TB / 7200 RPM / SATA</span>
-                            </li>
-                            <li>
-                                <span class="product-name">Exos X18</span>
-                                <span class="product-spec">18TB / 7200 RPM / SATA</span>
-                            </li>
-                            <li>
-                                <span class="product-name">Exos X16</span>
-                                <span class="product-spec">16TB / 7200 RPM / SATA</span>
-                            </li>
-                        </ul>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/seagate/exos-x20.svg" alt="Seagate Exos X20">
+                            <div class="product-name">Exos X20</div>
+                            <div class="product-spec">20TB | 7200 RPM</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/seagate/exos-x18.svg" alt="Seagate Exos X18">
+                            <div class="product-name">Exos X18</div>
+                            <div class="product-spec">18TB | 7200 RPM</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/seagate/exos-x16.svg" alt="Seagate Exos X16">
+                            <div class="product-name">Exos X16</div>
+                            <div class="product-spec">16TB | 7200 RPM</div>
+                        </div>
                     </div>
                     <a href="seagate-storage.html" class="view-brand-btn">View Seagate Storage →</a>
                 </div>
@@ -610,21 +653,22 @@
                             <span>Ultrastar Enterprise HDDs</span>
                         </div>
                     </div>
-                    <div class="brand-products">
-                        <ul class="product-mini-list">
-                            <li>
-                                <span class="product-name">Ultrastar DC HC560</span>
-                                <span class="product-spec">20TB / 7200 RPM / SATA</span>
-                            </li>
-                            <li>
-                                <span class="product-name">Ultrastar DC HC550</span>
-                                <span class="product-spec">18TB / 7200 RPM / SATA</span>
-                            </li>
-                            <li>
-                                <span class="product-name">Ultrastar DC HC520</span>
-                                <span class="product-spec">12TB / 7200 RPM / SATA</span>
-                            </li>
-                        </ul>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/wd/ultrastar-hc560.svg" alt="WD Ultrastar DC HC560">
+                            <div class="product-name">Ultrastar DC HC560</div>
+                            <div class="product-spec">20TB | 7200 RPM</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/wd/ultrastar-hc550.svg" alt="WD Ultrastar DC HC550">
+                            <div class="product-name">Ultrastar DC HC550</div>
+                            <div class="product-spec">18TB | 7200 RPM</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/storage/wd/ultrastar-hc520.svg" alt="WD Ultrastar DC HC520">
+                            <div class="product-name">Ultrastar DC HC520</div>
+                            <div class="product-spec">12TB | 7200 RPM</div>
+                        </div>
                     </div>
                     <a href="wd-storage.html" class="view-brand-btn">View WD Storage →</a>
                 </div>
@@ -657,27 +701,32 @@
                             <span>World Leader in AI & GPU Computing</span>
                         </div>
                     </div>
-                    <div class="brand-products">
-                        <ul class="product-mini-list" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-                            <li style="flex-direction: column; align-items: flex-start; border-bottom: none; border-right: 1px solid #f1f5f9; padding-right: 24px;">
-                                <span class="product-name" style="font-size: 20px; margin-bottom: 8px;">H100 Tensor Core</span>
-                                <span class="product-spec" style="margin-bottom: 4px;">80GB HBM3 Memory</span>
-                                <span class="product-spec" style="margin-bottom: 4px;">SXM5 / PCIe Form Factor</span>
-                                <span class="product-spec">700W / 350W TDP</span>
-                            </li>
-                            <li style="flex-direction: column; align-items: flex-start; border-bottom: none; border-right: 1px solid #f1f5f9; padding-right: 24px;">
-                                <span class="product-name" style="font-size: 20px; margin-bottom: 8px;">H200 Tensor Core</span>
-                                <span class="product-spec" style="margin-bottom: 4px;">141GB HBM3e Memory</span>
-                                <span class="product-spec" style="margin-bottom: 4px;">SXM5 Form Factor</span>
-                                <span class="product-spec">700W TDP</span>
-                            </li>
-                            <li style="flex-direction: column; align-items: flex-start; border-bottom: none;">
-                                <span class="product-name" style="font-size: 20px; margin-bottom: 8px;">A100 Tensor Core</span>
-                                <span class="product-spec" style="margin-bottom: 4px;">80GB HBM2e Memory</span>
-                                <span class="product-spec" style="margin-bottom: 4px;">SXM4 / PCIe Form Factor</span>
-                                <span class="product-spec">400W / 300W TDP</span>
-                            </li>
-                        </ul>
+                    <div class="product-images-grid" style="grid-template-columns: repeat(5, 1fr);">
+                        <div class="product-image-item">
+                            <img src="../images/products/gpu/nvidia/h100-sxm5.svg" alt="NVIDIA H100 SXM5">
+                            <div class="product-name">H100 SXM5</div>
+                            <div class="product-spec">80GB HBM3 | 700W</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/gpu/nvidia/h100-pcie.svg" alt="NVIDIA H100 PCIe">
+                            <div class="product-name">H100 PCIe</div>
+                            <div class="product-spec">80GB HBM3 | 350W</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/gpu/nvidia/h200-sxm5.svg" alt="NVIDIA H200 SXM5">
+                            <div class="product-name">H200 SXM5</div>
+                            <div class="product-spec">141GB HBM3e | 700W</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/gpu/nvidia/a100-sxm4.svg" alt="NVIDIA A100 SXM4">
+                            <div class="product-name">A100 SXM4</div>
+                            <div class="product-spec">80GB HBM2e | 400W</div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="../images/products/gpu/nvidia/a100-pcie.svg" alt="NVIDIA A100 PCIe">
+                            <div class="product-name">A100 PCIe</div>
+                            <div class="product-spec">80GB HBM2e | 300W</div>
+                        </div>
                     </div>
                     <a href="nvidia-gpu.html" class="view-brand-btn">View All NVIDIA GPUs →</a>
                 </div>
